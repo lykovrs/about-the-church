@@ -1,0 +1,81 @@
+@import 'node_modules/nib/lib/nib/'
+@import 'blocks/base'
+
+global-reset()
+nested-reset()
+reset-font()
+reset-box-model()
+reset-body()
+reset-table()
+reset-table-cell()
+reset-html5()
+
+*
+  box-sizing(border-box)
+
+html
+  height 100%
+
+body
+  font 16px/20px Georgia, serif
+  color base-font-color
+  width 100%
+  height 100%
+  background-color #f6f6f6
+  background-image(url("images/bg.png"))
+
+.wrapper
+  width 1220px
+  margin 0 auto
+  background-color #fff
+  min-height 100%
+  height auto !important
+  height 100%
+
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+@import 'blocks/header'
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.middle
+  width 100%
+  padding 0 0 125px
+  position relative
+
+.middleafter
+  display table
+  clear both
+  content ''
+
+.container
+  width 100%
+  float left
+  overflow hidden
+
+.content
+  padding 0 0 0 345px
+
+
+
+/* Left Sidebar
+-----------------------------------------------------------------------------*/
+.left-sidebar
+  float left
+  width 325px
+  margin-left -100%
+  position relative
+  background #B5E3FF
+
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer
+  width 1220px
+  margin -125px auto 0
+  height 125px
+  background #BFF08E
+  position relative
