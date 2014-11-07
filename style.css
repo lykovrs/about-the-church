@@ -227,7 +227,7 @@ body {
 -----------------------------------------------------------------------------*/
 .header {
   height: 140px;
-  padding: 15px 350px 0 240px;
+  padding: 20px 0 40px;
   position: relative;
 }
 .header__logo {
@@ -237,7 +237,53 @@ body {
   left: 40px;
 }
 .header__text {
-  font-size: 12px;
+  font-size: 13px;
+  line-height: 15px;
+  margin: 0 350px 0 240px;
+}
+.header__cite {
+  color: #c06458;
+  display: block;
+  text-align: right;
+  padding-top: 3px;
+}
+.authorization {
+  position: absolute;
+  top: 22px;
+  right: 40px;
+  background: #eee;
+  width: 280px;
+  height: 58px;
+  text-align: center;
+  color: #2a2a2a;
+  font: 20px/56px 'PT Serif', serif;
+}
+.authorization__sep {
+  padding: 0 15px;
+  font-size: 14px;
+  vertical-align: top;
+}
+.authorization__btn {
+  cursor: pointer;
+}
+.authorization__btn:hover {
+  color: #c06458;
+}
+.menu-top {
+  height: 40px;
+  background-color: #65727d;
+  text-align: right;
+  padding: 4px 40px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.menu-top__item {
+  line-height: 36px;
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
 }
 /* Middle
 -----------------------------------------------------------------------------*/

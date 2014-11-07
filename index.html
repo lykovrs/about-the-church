@@ -2,11 +2,16 @@
 <html>
 <head>
 	<meta charset="utf-8" />
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<title></title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<link href="style.css" rel="stylesheet">
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+	<script src="js/main.js"></script>
 </head>
 
 <body>
@@ -17,9 +22,58 @@
 		<a class="header__logo" href="/">
 			<img src="images/logo.png" alt="" width="178" height="55"/>
 		</a>
-		<p class="header__text">
-		Истина Христова должна быть распространяема максимально широко, достигая максимального числа людей. Сегодня Интернет предоставляет исключительные возможности в этом отношении, и Церковь не вправе пренебречь ими, ибо, по слову Апостола, «горе мне, если не благовествую.</p>
-		Патриарх Алексий II
+		<div class="header__text">
+		Истина Христова должна быть распространяема максимально широко, достигая максимального числа людей. Сегодня Интернет предоставляет исключительные возможности в этом отношении, и Церковь не вправе пренебречь ими, ибо, по слову Апостола, «горе мне, если не благовествую.
+			<cite class="header__cite">Патриарх Алексий II</cite>
+		</div>
+
+		<div class="authorization">
+			<span id="loginUser" class="authorization__btn">Вход</span>
+			<i class="authorization__sep">|</i>
+			<span id="createUser" class="authorization__btn">Регистрация</span>
+
+			<div id="create-user-form" title="Создать нового пользователя">
+				<p class="validateTips">Форма регистрации нового пользователя.</p>
+
+				<form id="registration">
+					<fieldset>
+						<label for="new-name">Name</label>
+						<input type="text" name="name" id="new-name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
+						<label for="new-email">Email</label>
+						<input type="text" name="email" id="new-email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
+						<label for="new-password">Password</label>
+						<input type="password" name="password" id="new-password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+
+						<!-- Allow form submission with keyboard without duplicating the dialog button -->
+						<input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+					</fieldset>
+				</form>
+			</div>
+
+			<div id="login-user-form" title="Авторизация">
+				<p class="validateTips">Введите свой логин и пароль</p>
+
+				<form id="login">
+					<fieldset>
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
+						<label for="password">Password</label>
+						<input type="password" name="password" id="password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+
+						<!-- Allow form submission with keyboard without duplicating the dialog button -->
+						<input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+					</fieldset>
+				</form>
+			</div>
+
+		</div>
+		<nav class="menu-top">
+			<a class="menu-top__item" href="#">Одноклассники</a>
+			<a class="menu-top__item" href="#">Facebook</a>
+			<a class="menu-top__item" href="#">Вконтакте</a>
+			<a class="menu-top__item" href="#">Карта сайта</a>
+		</nav>
+
 
 	</header><!-- .header-->
 
