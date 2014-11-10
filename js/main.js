@@ -80,4 +80,8 @@ $(function() {
 	$( "#loginUser" ).button().on( "click", function() {
 		loginUser.dialog( "open" );
 	});
+
+	$( "#datepicker" ).datepicker();
 });
+
+
