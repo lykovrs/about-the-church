@@ -327,6 +327,28 @@ body {
 .main-hint__img {
   height: 64px;
 }
+.m-menu {
+  padding: 15px 0;
+  margin: 0;
+  background: #eee;
+}
+.m-menu__item {
+  list-style: none;
+}
+.m-menu__lnk {
+  text-decoration: none;
+  font: 20px/60px 'PT Serif', serif;
+  color: #6a7783;
+  display: block;
+  border-left: 10px solid transparent;
+  padding-left: 30px;
+}
+.m-menu__lnk_t_active,
+.m-menu__lnk:hover {
+  color: #fff;
+  background: #6a7783;
+  border-left: 10px solid #c06458;
+}
 /* Middle
 -----------------------------------------------------------------------------*/
 .middle {

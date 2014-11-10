@@ -1,0 +1,19 @@
+.header {
+  height: 140px;
+  padding: 20px 0 40px;
+}
+.header__logo {
+  display: block;
+  absolute: top 22px left 40px;
+}
+.header__text {
+  font-size: 13px;
+  line-height: 15px;
+  margin: 0 350px 0 240px;
+}
+.header__cite {
+  color: old-brick;
+  display: block;
+  text-align: right;
+  padding-top: 3px;
+}

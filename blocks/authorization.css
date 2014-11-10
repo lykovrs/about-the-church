@@ -1,0 +1,20 @@
+.authorization {
+  absolute: top 22px right 40px;
+  background: bg-block;
+  width: 280px;
+  height: 58px;
+  text-align: center;
+  color: #2a2a2a;
+  font: 20px/56px base-font;
+}
+.authorization__sep {
+  padding: 0 15px;
+  font-size: 14px;
+  vertical-align: top;
+}
+.authorization__btn {
+  cursor: pointer;
+}
+.authorization__btn:hover {
+  color: old-brick;
+}
