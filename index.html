@@ -8,6 +8,7 @@
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<link href="bower_components/jquery-ui/themes/base/datepicker.css" rel="stylesheet">
+	<link href="bower_components/jquery-ui/themes/base/dialog.css" rel="stylesheet">
 	<link href="style.css" rel="stylesheet">
 
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -31,9 +32,9 @@
 		<div class="authorization">
 			<span id="loginUser" class="authorization__btn">Вход</span>
 			<i class="authorization__sep">|</i>
-			<span id="createUser" class="authorization__btn">Регистрация</span>
+			<span id="createUser" class="authorization__btn authorization__btn_t_reg">Регистрация</span>
 
-			<div id="create-user-form" title="Создать нового пользователя">
+			<div class="dialog" id="create-user-form" title="Создать нового пользователя">
 				<p class="validateTips">Форма регистрации нового пользователя.</p>
 
 				<form id="registration">
@@ -51,7 +52,7 @@
 				</form>
 			</div>
 
-			<div id="login-user-form" title="Авторизация">
+			<div class="dialog" id="login-user-form" title="Авторизация">
 				<p class="validateTips">Введите свой логин и пароль</p>
 
 				<form id="login">
@@ -117,8 +118,10 @@
                 <li class="m-menu__item"><a class="m-menu__lnk" href="#">Контакты</a></li>
             </menu>
 
-            <div id="datepicker"></div>
+            <div id="datepicker" class="m-datepicker"></div>
+            <div class="">dfadf</div>
 		</aside><!-- .left-sidebar -->
+
 
 	</div><!-- .middle-->
 

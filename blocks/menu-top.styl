@@ -12,6 +12,9 @@
     font-size 13px
     line-height 36px
 
+    &:hover
+      color young-brick
+
     &:before
       relative top 2px
       display inline-block
@@ -25,17 +28,33 @@
     &:before
       background-position 0 0
 
+    &:hover
+      &:before
+        background-position 0 -15px
+
   &__item_t_fb
     &:before
       background-position -15px 0
+
+    &:hover
+      &:before
+        background-position -15px -15px
 
   &__item_t_vk
     &:before
       background-position -31px 0
 
+    &:hover
+      &:before
+        background-position -31px -15px
+
   &__item_t_map
     &:before
       background-position -46px 0
+
+    &:hover
+      &:before
+        background-position -46px -15px
 
 
 

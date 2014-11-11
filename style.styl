@@ -37,8 +37,7 @@ body
 @import 'blocks/header'
 @import 'blocks/authorization'
 @import 'blocks/menu-top'
-@import 'blocks/main-hint'
-@import 'blocks/m-menu'
+@import 'blocks/dialog'
 
 /* Middle
 -----------------------------------------------------------------------------*/
@@ -46,6 +45,8 @@ body
   position relative
   padding 0 0 125px
   width 100%
+
+  clearfix()
 
 .middleafter
   display table
@@ -60,6 +61,10 @@ body
 .content
   padding 0 0 0 345px
 
+@import 'blocks/main-hint'
+
+
+
 
 
 /* Left Sidebar
@@ -71,7 +76,8 @@ body
   width 325px
   background #B5E3FF
 
-
+@import 'blocks/m-menu'
+@import 'blocks/m-datepicker'
 
 /* Footer
 -----------------------------------------------------------------------------*/
