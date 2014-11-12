@@ -1,0 +1,19 @@
+.main-hint__item {
+  height: 189px;
+  width: 25%;
+  text-align: center;
+  padding: 30px 30px 0;
+  vertical-align: top;
+  float: left;
+}
+.main-hint__num {
+  color: old-brick;
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+.main-hint__text {
+  font-size: 14px;
+}
+.main-hint__img {
+  height: 64px;
+}

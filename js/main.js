@@ -84,8 +84,8 @@ $(function() {
 
 	$.datepicker.regional['ru'] = {
 		closeText: 'Закрыть',
-		prevText: '‹',
-		nextText: '›',
+		prevText: '',
+		nextText: '',
 		currentText: 'Сегодня',
 		monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
 			'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
@@ -103,6 +103,47 @@ $(function() {
 	$.datepicker.setDefaults($.datepicker.regional['ru']);
 
 	$( "#datepicker" ).datepicker($.datepicker.regional['ru']);
+
+
+
+	/*
+	 Carousel initialization
+	 */
+	$('.jcarousel')
+		.jcarousel({
+			// Options go here
+		});
+
+		/*
+		 Prev control initialization
+		 */
+		$('.jcarousel-control-prev')
+			.on('jcarouselcontrol:active', function() {
+				$(this).removeClass('inactive');
+			})
+			.on('jcarouselcontrol:inactive', function() {
+				$(this).addClass('inactive');
+			})
+			.jcarouselControl({
+				// Options go here
+				target: '-=1'
+			});
+
+		/*
+		 Next control initialization
+		 */
+		$('.jcarousel-control-next')
+			.on('jcarouselcontrol:active', function() {
+				$(this).removeClass('inactive');
+			})
+			.on('jcarouselcontrol:inactive', function() {
+				$(this).addClass('inactive');
+			})
+			.jcarouselControl({
+				// Options go here
+				target: '+=1'
+			});
+
 });
 
 

@@ -391,6 +391,22 @@ body {
 .main-hint__img {
   height: 64px;
 }
+.jcarousel {
+  position: relative;
+  overflow: hidden;
+}
+.jcarousel ul {
+  width: 20000em;
+  position: relative;
+/* Optional, required in this case since it's a <ul> element */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.jcarousel li {
+/* Required only for block elements like <li>'s */
+  float: left;
+}
 /* Left Sidebar
 -----------------------------------------------------------------------------*/
 .left-sidebar {
@@ -398,7 +414,6 @@ body {
   float: left;
   margin-left: -100%;
   width: 325px;
-  background: #b5e3ff;
 }
 .m-menu {
   padding: 15px 0 0;
@@ -407,7 +422,7 @@ body {
 }
 .m-menu__item {
   list-style: none;
-  margin-bottom: 25px;
+  padding-bottom: 24px;
 }
 .m-menu__lnk {
   text-decoration: none;
@@ -429,8 +444,8 @@ body {
 }
 .m-datepicker {
   background: #eee;
-  margin: 15px 0;
-  padding: 30px 0;
+  margin: 20px 0;
+  padding: 14px 0 24px;
 }
 .m-datepicker .ui-datepicker {
   margin-left: 30px;
@@ -460,8 +475,34 @@ body {
   color: #fff;
   background: #c06458;
 }
-.m-datepicker .ui-datepicker-prev {
-  font: bold 16px 'Istok Web', sans-serif;
+.m-datepicker .ui-datepicker-prev,
+.m-datepicker .ui-datepicker-next {
+  top: 7px;
+}
+.m-datepicker .ui-datepicker-prev .ui-icon,
+.m-datepicker .ui-datepicker-next .ui-icon {
+  width: 18px;
+  height: 18px;
+  background: url("images/site-icons.png") no-repeat 2px -30px;
+}
+.m-datepicker .ui-datepicker-next .ui-icon {
+  background-position: -15px -30px;
+}
+.news {
+  background: #eee;
+  padding: 15px 20px 25px 40px;
+}
+.news__item {
+  padding: 10px 0 5px;
+}
+.news__date {
+  color: #3e454c;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.news__header {
+  color: #6a7783;
+  font-size: 15px;
 }
 /* Footer
 -----------------------------------------------------------------------------*/
