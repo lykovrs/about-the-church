@@ -359,7 +359,7 @@ body {
   width: 100%;
 }
 .content {
-  padding: 0 0 0 345px;
+  padding: 0 0 0 325px;
 }
 .main-hint {
   zoom: 1;
@@ -395,17 +395,100 @@ body {
   position: relative;
   overflow: hidden;
 }
-.jcarousel ul {
-  width: 20000em;
+.jcarousel relative,
+.jcarousel>ul {
   position: relative;
-/* Optional, required in this case since it's a <ul> element */
-  list-style: none;
   margin: 0;
   padding: 0;
+  width: 20000em;
+  list-style: none;
 }
-.jcarousel li {
-/* Required only for block elements like <li>'s */
+.jcarousel__item {
+  position: relative;
   float: left;
+  overflow: hidden;
+  width: 895px;
+  height: 350px;
+}
+.jcarousel__item-helper {
+  position: absolute;
+  bottom: 29px;
+  left: 50%;
+  display: block;
+  padding: 0 30px;
+  width: 250px;
+  height: 50px;
+  border: 3px solid #fff;
+  background: rgba(192,100,88,0.8);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 43px;
+  margin-left: -125px;
+}
+.jcarousel__item-helper:hover {
+  background: rgba(234,101,84,0.8);
+}
+.jcarousel__control {
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  margin-top: -20px;
+}
+.jcarousel__control:before {
+  display: block;
+  margin: 10px auto;
+  width: 11px;
+  height: 17px;
+  background: url("images/site-icons.png") no-repeat;
+  content: "";
+}
+.jcarousel__control:hover {
+  background-color: #6a7783;
+}
+.jcarousel__control_t_prev {
+  left: 0;
+}
+.jcarousel__control_t_prev:before {
+  background-position: -1px -30px;
+}
+.jcarousel__control_t_prev:hover:before {
+  background-position: -1px -48px;
+}
+.jcarousel__control_t_next {
+  right: 0;
+}
+.jcarousel__control_t_next:before {
+  background-position: -19px -30px;
+}
+.jcarousel__control_t_next:hover:before {
+  background-position: -19px -48px;
+}
+.jcarousel__control_t_prev.inactive {
+  background-color: #fff;
+}
+.jcarousel__control_t_prev.inactive:before {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+.jcarousel__control_t_prev.inactive:hover:before {
+  background-position: -1px -30px;
+}
+.jcarousel__control_t_next.inactive {
+  background-color: #fff;
+}
+.jcarousel__control_t_next.inactive:before {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+.jcarousel__control_t_next.inactive:hover:before {
+  background-position: -19px -30px;
 }
 /* Left Sidebar
 -----------------------------------------------------------------------------*/

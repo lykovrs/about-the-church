@@ -1,34 +1,103 @@
-/*
-This is the visible area of you carousel.
-Set a width here to define how much items are visible.
-The width can be either fixed in px or flexible in %.
-Position must be relative!
-*/
-.jcarousel {
-  position: relative;
-  overflow: hidden;
-}
+.jcarousel
+  position relative
+  overflow hidden
+  relative
 
-/*
-This is the container of the carousel items.
-You must ensure that the position is relative or absolute and
-that the width is big enough to contain all items.
-*/
-.jcarousel ul {
-  width: 20000em;
-  position: relative;
+  &>ul
+    position relative
+    margin 0
+    padding 0
+    width 20000em
+    list-style none
 
-  /* Optional, required in this case since it's a <ul> element */
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+  &__item
+    position relative
+    float left
+    overflow hidden
+    width 895px
+    height 350px
 
-/*
-These are the item elements. jCarousel works best, if the items
-have a fixed width and height (but it's not required).
-*/
-.jcarousel li {
-  /* Required only for block elements like <li>'s */
-  float: left;
-}
+
+  &__item-helper
+    absolute bottom 29px left 50%
+    display block
+    padding 0 30px
+    width 250px
+    height 50px
+    border 3px solid #ffffff
+    background rgba(old-brick, .8)
+    color #ffffff
+    text-align center
+    text-decoration none
+    font-size 20px
+    line-height 43px
+    margin-left -125px
+
+    &:hover
+      background rgba(young-brick, .8)
+
+
+
+
+  &__control
+    absolute top 50%
+    display block
+    width 40px
+    height 40px
+    background-color #fff
+    margin-top -20px
+
+    &:before
+      display block
+      margin 10px auto
+      width 11px
+      height 17px
+      background url("images/site-icons.png") no-repeat
+      content ""
+
+    &:hover
+      background-color base-font-color
+
+    &_t_prev
+      left 0
+
+      &:before
+        background-position -1px -30px
+
+      &:hover
+        &:before
+          background-position -1px -48px
+
+
+    &_t_next
+      right 0
+
+      &:before
+        background-position -19px -30px
+
+      &:hover
+        &:before
+          background-position -19px -48px
+
+    &_t_prev.inactive
+      background-color #fff
+
+      &:before
+        opacity 0.5
+
+      &:hover
+        &:before
+          background-position -1px -30px
+
+
+    &_t_next.inactive
+      background-color #fff
+
+      &:before
+        opacity 0.5
+
+      &:hover
+        &:before
+          background-position -19px -30px
+
+
