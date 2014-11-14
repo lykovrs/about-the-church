@@ -594,5 +594,16 @@ body {
   margin: -125px auto 0;
   width: 1220px;
   height: 125px;
-  background: #bff08e;
+  background: #3e454c url("images/bg-2.png") repeat-x top;
+  color: #fff;
+  font-size: 14px;
+  padding: 50px 200px 10px 40px;
+}
+.footer__copyright {
+  position: absolute;
+  right: 44px;
+  top: 50px;
+}
+.footer__lnk {
+  color: #fff;
 }
