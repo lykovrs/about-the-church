@@ -1,3 +1,8 @@
+/*
+ *
+ * Variables
+ */
+
 /*Colors*/
 
 old-brick = #c06458
@@ -6,12 +11,402 @@ bitumen = #65727d
 storm = #487fae
 wet-bitumen = #3e454c
 light-bitumen = #e1e2e3
-
 base-font-color = #6a7783
-base-font = 'PT Serif', serif
-web-symbols = 'Istok Web', sans-serif;
-
 bg-block = #eee
 
+base-font-style = 'PT Serif', serif
+web-symbols = 'Istok Web', sans-serif;
 
+
+
+lighten-fixed($color, $percent)
+  $h = hue($color)
+  $s = saturation($color)
+  $l = lightness($color)
+  $l += $percent
+  rgb(hsl($h,$s,$l))
+
+darken-fixed($color, $percent)
+  $h = hue($color)
+  $s = saturation($color)
+  $l = lightness($color)
+  $l -= $percent
+  rgb(hsl($h,$s,$l))
+
+// Links
+$linkColor ?=         old-brick
+$linkColorHover ?=    darken-fixed($linkColor, 15)
+
+// Grays
+$black ?=             #000
+$grayDark ?=          lighten-fixed($black, 25%)
+$gray ?=              lighten-fixed($black, 50%)
+$grayLight ?=         lighten-fixed($black, 75%)
+$grayLighter ?=       lighten-fixed($black, 90%)
+$white ?=             #ffffff
+
+// Accent Colors
+$blue ?=              #049CDB
+$blueDark ?=          #0064CD
+$green ?=             #46a546
+$red ?=               #9d261d
+$yellow ?=            #ffc40d
+$orange ?=            #f89406
+$pink ?=              #c3325f
+$purple ?=            #7a43b6
+
+// Baseline grid
+$basefont ?=          16px
+$baseline ?=          20px
+
+// BODY TEXT
+// ---------
+
+// Links
+a
+  color: $linkColor
+  text-decoration: none
+  line-height: inherit
+  font-weight: inherit
+  &:hover
+    color: $linkColorHover
+    text-decoration: underline
+
+p
+  font-shorthand(normal, $basefont, $baseline);
+  margin-bottom: ($baseline / 2)
+  small
+    font-size: ($basefont - 2)
+    color: $grayLight
+
+
+// HEADINGS
+h1, h2, h3, h4, h5, h6
+  font-weight: normal
+  color: $grayDark
+  small
+    color: $grayLight
+
+h1
+  margin-bottom: $baseline
+  font-size: 28px
+  line-height: ($baseline * 2)
+  small
+    font-size: 18px
+
+h2
+  font-size: 24px
+  line-height: ($baseline * 2)
+  small
+    font-size: 14px
+
+h3, h4, h5, h6
+  line-height: ($baseline * 2)
+
+h3
+  font-size: 18px
+  small
+    font-size: 14px
+
+h4
+  font-size: 16px
+  small
+    font-size: 12px
+
+h5
+  font-size: 14px
+
+h6
+  font-size: 13px
+  color: $grayLight
+  text-transform: uppercase
+
+// COLORS
+
+// Unordered and Ordered lists
+ul, ol
+  margin: 0 0 $baseline 25px
+
+ul ul,
+ul ol,
+ol ol,
+ol ul
+  margin-bottom: 0
+
+ul
+  list-style: disc
+
+ol
+  list-style: decimal
+
+li
+  line-height: $baseline
+  color: $gray
+
+ul.unstyled
+  list-style: none
+  margin-left: 0
+
+// Description Lists
+dl
+  margin-bottom: $baseline
+  dt, dd
+    line-height: $baseline
+  dt
+    font-weight: bold
+  dd
+    margin-left: ($baseline / 2)
+
+
+// MISC
+
+// Horizontal rules
+hr
+  margin: 20px 0 19px
+  border: 0
+  border-bottom: 1px solid #eee
+
+// Emphasis
+strong
+  font-style: inherit
+  font-weight: bold
+
+em
+  font-style: italic
+  font-weight: inherit
+  line-height: inherit
+
+
+// Blockquotes
+blockquote
+  margin-bottom: $baseline
+  border-left: 5px solid #eee
+  padding-left: 15px
+  p
+    font-shorthand(300, 14px, $baseline)
+    margin-bottom: 0
+  small
+    display: block
+    font-shorthand(300, 12px, $baseline)
+    color: $grayLight
+    &:before
+      content: '\2014 \00A0'
+
+// Addresses
+address
+  display: block
+  line-height: $baseline
+  margin-bottom: $baseline
+
+// Inline and block code styles
+code, pre
+  padding: 0 3px 2px
+  font-family: Monaco, Andale Mono, Courier New, monospace
+  font-size: 12px
+  border-radius(3px)
+
+code
+  background-color: lighten-fixed($orange, 40%)
+  color: rgba(0, 0, 0, .75)
+  padding: 1px 3px
+
+pre
+  background-color: #f5f5f5
+  display: block
+  padding: (($baseline - 1) / 2)
+  margin: 0 0 $baseline
+  line-height: $baseline
+  font-size: 12px
+  border: 1px solid #ccc
+  border: 1px solid rgba(0, 0, 0, .15)
+  border-radius(3px)
+  white-space: pre
+  white-space: pre-wrap
+  word-wrap: break-word
+
+/*
+ * Tables.less
+ * Tables for, you guessed it, tabular data
+ * ---------------------------------------- */
+
+
+// BASELINE STYLES
+// ---------------
+
+table
+  width: 100%
+  margin-bottom: $baseline
+  padding: 0
+  font-size: $basefont
+  border-collapse: collapse
+  th,
+  td
+    padding: 10px 10px 9px
+    line-height: $baseline
+    text-align: left
+  th
+    padding-top: 9px
+    font-weight: bold
+    vertical-align: middle
+  td
+    vertical-align: top
+    border-top: 1px solid #ddd
+  // When scoped to row, fix th in tbody
+  tbody th
+    border-top: 1px solid #ddd
+    vertical-align: top
+
+
+// FORM STYLES
+// -----------
+
+form
+  margin-bottom: $baseline
+
+// Groups of fields with labels on top (legends)
+fieldset
+  margin-bottom: $baseline
+  padding-top: $baseline
+  legend
+    display: block
+    padding-left: 150px
+    font-size: ($basefont * 1.5)
+    line-height: 1
+    color: $grayDark
+*padding: 0 0 5px 145px /* IE6-7 */
+*line-height: 1.5 /* IE6-7 */
+
+// Parent element that clears floats and wraps labels and fields together
+form .clearfix
+  margin-bottom: $baseline
+  clearfix()
+
+// Set font for forms
+label,
+input,
+select,
+textarea
+  font-sans-serif(normal, 13px, normal)
+
+// Float labels left
+label
+  padding-top: 6px
+  font-size: $basefont
+  line-height: $baseline
+  width: 130px
+  text-align: right
+  color: $grayDark
+
+// Shift over the inside div to align all label's relevant content
+form .input
+  margin-left: 150px
+
+// Checkboxs and radio buttons
+input[type=checkbox],
+input[type=radio]
+  cursor: pointer
+
+// Inputs, Textareas, Selects
+input,
+textarea,
+select,
+.uneditable-input
+  display: inline-block
+  width: 210px
+  height: $baseline
+  padding: 4px
+  font-size: $basefont
+  line-height: $baseline
+  color: $gray
+  border: 1px solid #ccc
+  border-radius(3px)
+
+// remove padding from select
+select
+  padding: initial
+
+// mini reset for non-html5 file types
+input[type=checkbox],
+input[type=radio]
+  width: auto
+  height: auto
+  padding: 0
+  margin: 3px 0
+*margin-top: 0 /* IE6-7 */
+line-height: normal
+border: none
+
+input[type=file]
+  background-color: $white
+  padding: initial
+  border: initial
+  line-height: initial
+  box-shadow(none)
+
+input[type=button],
+input[type=reset],
+input[type=submit]
+  width: auto
+  height: auto
+
+select,
+input[type=file]
+  height: ($baseline * 1.5) // In IE7, the height of the select element cannot be changed by height, only font-size
+*height: auto // Reset for IE7
+line-height: ($baseline * 1.5)
+*margin-top: 4px /* For IE7, add top margin to align select with labels */
+
+// Make multiple select elements height not fixed
+select[multiple]
+  height: inherit
+  background-color: $white // Fixes Chromium bug of unreadable items
+
+textarea
+  height: auto
+
+// For text that needs to appear as an input but should not be an input
+.uneditable-input
+  background-color: $white
+  display: block
+  border-color: #eee
+  box-shadow(inset 0 1px 2px rgba(0,0,0,.025))
+  cursor: not-allowed
+
+// Placeholder text gets special styles; can't be bundled together though for some reason
+:-moz-placeholder
+  color: $grayLight
+
+::-webkit-input-placeholder
+  color: $grayLight
+
+// Focus states
+input,
+textarea
+  transitions = border linear .2s, box-shadow linear .2s
+  transition(transitions)
+  box-shadow(inset 0 1px 3px rgba(0,0,0,.1))
+
+input:focus,
+textarea:focus
+  outline: 0
+  border-color: rgba(old-brick,.8)
+  shadow = inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(old-brick,.6)
+  box-shadow(shadow)
+
+input[type=file]:focus,
+input[type=checkbox]:focus,
+select:focus
+  box-shadow(none) // override for file inputs
+  outline: 1px dotted #666 // Selet elements don't get box-shadow styles, so instead we do outline
+
+// Disabled and read-only inputs
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly]
+  background-color: #f5f5f5
+  border-color: #ddd
+  cursor: not-allowed
 

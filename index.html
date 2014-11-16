@@ -9,6 +9,7 @@
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<link href="bower_components/jquery-ui/themes/base/datepicker.css" rel="stylesheet">
+	<link href="bower_components/jquery-ui/themes/base/autocomplete.css" rel="stylesheet">
 	<link href="bower_components/jquery-ui/themes/base/dialog.css" rel="stylesheet">
 	<link href="style.css" rel="stylesheet">
 
@@ -16,6 +17,7 @@
 	<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
     <script type="text/javascript" src="bower_components/jcarousel/dist/jquery.jcarousel.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/finder.js"></script>
 </head>
 
 <body>
@@ -106,6 +108,7 @@
                 </p>
             </div>
 		</section>
+
 		<div class="container">
 			<main class="content">
                 <div class="jcarousel">
@@ -130,12 +133,41 @@
                     <a href="#" class="jcarousel__control jcarousel__control_t_next jcarousel-control-next" data-jcarouselcontrol="true"></a>
                 </div>
 
-                <section class="finder">
-                    <h2 class="finder__header">Выбирайте храм по вашим критериям</h2>
+                <section class="inner">
+                    <h1>Выбирайте храм по вашим критериям</h1>
+
+                    <div class="finder">
+                        <form id="finder-form">
+                            <p class="finder__row">
+                                <label class="finder__label finder__label_t_left">Город </label>
+
+                                    <select class="finder__select" id="sel-city">
+                                        <option class="Russia" value="Rostov-na-Donu">Ростов–на–Дону</option>
+                                        <option class="Russia" value="Moscow">Москва</option>
+                                        <option class="Russia" value="SPeterburg">Санкт-Петербург</option>
+                                        <option class="Russia" value="Ekaterinburg">Екатеринбург</option>
+                                        <option class="Russia" value="Sevastopol">Севастополь</option>
+                                        <option class="Ukraine" value="Kiev">Киев</option>
+                                        <option class="Belarus" value="Minsk">Минск</option>
+                                        <option class="Belarus" value="Bobruisk">Бобруйск</option>
+                                    </select>
+
+
+                            </p>
+                            <p class="finder__row">
+                                <label class="finder__label finder__label_t_left">Дата службы </label>
+                                <label class="finder__input-wrapper">
+                                    <input class="finder__input" type="text" id="finder-datepicker">
+                                </label>
+
+                            </p>
+
+
+                        </form>
+                    </div>
 
                 </section>
 
-				<strong>Content:</strong> Sed placerat accumsan ligula. Aliquam felis magna, congue quis, tempus eu, aliquam vitae, ante. Cras neque justo, ultrices at, rhoncus a, facilisis eget, nisl. Quisque vitae pede. Nam et augue. Sed a elit. Ut vel massa. Suspendisse nibh pede, ultrices vitae, ultrices nec, mollis non, nibh. In sit amet pede quis leo vulputate hendrerit. Cras laoreet leo et justo auctor condimentum. Integer id enim. Suspendisse egestas, dui ac egestas mollis, libero orci hendrerit lacus, et malesuada lorem neque ac libero. Morbi tempor pulvinar pede. Donec vel elit.
 			</main><!-- .content -->
 		</div><!-- .container-->
 
@@ -161,6 +193,52 @@
             </div>
 		</aside><!-- .left-sidebar -->
 
+        <section class="middle__all-width-content">
+
+
+            <h2 class="middle__header jcarousel__header">Отзывы о работе сайта</h2>
+
+            <div class="jcarousel__wrapper">
+
+                <div class="jcarousel jcarousel_t_card">
+                    <ul>
+                        <li class="jcarousel__item jcarousel__item_t_card">
+                            <img class="jcarousel__img jcarousel__img_t_card" src="images/recommendation.jpg" alt=""/>
+                            <p class="jcarousel__text">«Текст отзыва»</p>
+                            <p class="jcarousel__author">Председатель<br/>Приходского совета собора</p>
+                        </li>
+                        <li class="jcarousel__item jcarousel__item_t_card">
+                            <img class="jcarousel__img jcarousel__img_t_card" src="images/recommendation.jpg" alt=""/>
+                            <p class="jcarousel__text">«Текст отзыва»</p>
+                            <p class="jcarousel__author">Председатель<br/>Приходского совета собора</p>
+                        </li>
+                        <li class="jcarousel__item jcarousel__item_t_card">
+                            <img class="jcarousel__img jcarousel__img_t_card" src="images/recommendation.jpg" alt=""/>
+                            <p class="jcarousel__text">«Текст отзыва»</p>
+                            <p class="jcarousel__author">Председатель<br/>Приходского совета собора</p>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!-- Prev/next controls -->
+                <a href="#" class="jcarousel__control jcarousel__control_t_prev jcarousel-control-prev inactive" data-jcarouselcontrol="true"></a>
+                <a href="#" class="jcarousel__control jcarousel__control_t_next jcarousel-control-next" data-jcarouselcontrol="true"></a>
+            </div>
+
+            <h2 class="middle__header">Часто задаваемые вопросы</h2>
+
+            <div class="middle__content ">
+                <div class="helper">
+                    <a class="helper__item" href="#">Как сделать пожертвование с помощью сайта?</a>
+                    <a class="helper__item" href="#">Как мне узнать, какие храмы в моем городе нуждаются в реставрации?</a>
+                    <a class="helper__item" href="#">Как узнать, дошло ли мое пожертвование до храма?</a>
+                    <a class="helper__item" href="#">Чем я могу помочь сайту?</a>
+                </div>
+            </div>
+
+
+        </section>
 
 	</div><!-- .middle-->
 
