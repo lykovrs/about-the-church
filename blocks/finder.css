@@ -1,0 +1,49 @@
+.finder {
+  border: 2px solid old-brick;
+  background: url("images/finder.jpg") no-repeat 0 -34px;
+  padding: 152px 32px 0 38px;
+  height: 475px;
+}
+.finder__label {
+  font-size: 20px;
+  color: base-font-color;
+  line-height: 48px;
+  width: 136px;
+  display: inline-block;
+  padding: 0;
+}
+.finder__label_t_left {
+  text-align: left;
+}
+.finder__row {
+  margin-bottom: 33px;
+}
+.finder__input,
+.finder__input>input {
+  font: 20px Georgia, serif;
+  color: wet-bitumen;
+  width: 307px;
+  height: 46px;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  vertical-align: top;
+  color: wet-bitumen;
+}
+.finder__input:focus,
+.finder__input>input:focus {
+  box-shadow: none;
+}
+.finder__input-wrapper {
+  position: relative;
+  border: 1px solid base-font-color;
+  width: 360px;
+  height: 48px;
+  padding: 0 15px;
+  border-radius: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+.finder__input-wrapper img {
+  padding-top: 12px;
+}

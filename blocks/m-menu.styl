@@ -1,33 +1,27 @@
 .m-menu
-  padding 15px 0 0
   margin 0
+  padding 15px 0 0
   background bg-block
 
   &__item
-    list-style none
     padding-bottom 24px
+    list-style none
 
   &__lnk
+    display block
+    padding-left 30px
+    border-left 10px solid transparent
+    color base-font-color
     text-decoration none
     font 20px/60px base-font-style
-    color base-font-color
-    display block
-    border-left 10px solid transparent
-    padding-left 30px
 
     &:hover
-      color young-brick
       background light-bitumen
+      color young-brick
       text-decoration none
 
     &_t_active,
     &_t_active:hover
-      color #fff
-      background base-font-color url("images/bg-1.png") repeat-y right
       border-left 10px solid old-brick
-
-
-
-
-
-
+      background base-font-color url("images/bg-1.png") repeat-y right
+      color #fff

@@ -8,6 +8,7 @@
 	<title></title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
+	<link href="bower_components/jquery-ui/themes/base/selectmenu.css" rel="stylesheet">
 	<link href="bower_components/jquery-ui/themes/base/datepicker.css" rel="stylesheet">
 	<link href="bower_components/jquery-ui/themes/base/autocomplete.css" rel="stylesheet">
 	<link href="bower_components/jquery-ui/themes/base/dialog.css" rel="stylesheet">
@@ -43,15 +44,24 @@
 
 				<form id="registration">
 					<fieldset>
-						<label for="new-name">Name</label>
-						<input type="text" name="name" id="new-name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
-						<label for="new-email">Email</label>
-						<input type="text" name="email" id="new-email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
-						<label for="new-password">Password</label>
-						<input type="password" name="password" id="new-password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+                        <p>
+                            <label for="new-name">Имя</label>
+                            <input type="text" name="name" id="new-name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
+
+                        </p>
+                        <p>
+                            <label for="new-email">Email</label>
+                            <input type="text" name="email" id="new-email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
+
+                        </p>
+                        <p>
+                            <label for="new-password">Пароль</label>
+                            <input type="password" name="password" id="new-password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+
+                        </p>
 
 						<!-- Allow form submission with keyboard without duplicating the dialog button -->
-						<input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+						<input type="submit">
 					</fieldset>
 				</form>
 			</div>
@@ -61,13 +71,18 @@
 
 				<form id="login">
 					<fieldset>
-						<label for="name">Name</label>
-						<input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
-						<label for="password">Password</label>
-						<input type="password" name="password" id="password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+                        <p>
+                            <label for="name">Имя</label>
+                            <input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
 
+                        </p>
+                        <p>
+                            <label for="password">Пароль</label>
+                            <input type="password" name="password" id="password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+
+                        </p>
 						<!-- Allow form submission with keyboard without duplicating the dialog button -->
-						<input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+						<input type="submit">
 					</fieldset>
 				</form>
 			</div>
@@ -80,10 +95,10 @@
 			<a class="menu-top__item  menu-top__item_t_map" href="#">Карта сайта</a>
 		</nav>
 
-
 	</header><!-- .header-->
 
 	<div class="middle">
+
 		<section class="main-hint">
 			<div class="main-hint__item">
 				<img class="main-hint__img" src="images/hint/hint_1.png" alt=""/>
@@ -152,20 +167,48 @@
                                         <option class="Belarus" value="Bobruisk">Бобруйск</option>
                                     </select>
 
-
+                                <button class="finder__btn">Поиск</button>
                             </p>
-                            <p class="finder__row">
+                            <p class="finder__row finder__row_t_last">
                                 <label class="finder__label finder__label_t_left">Дата службы </label>
                                 <label class="finder__input-wrapper">
                                     <input class="finder__input" type="text" id="finder-datepicker">
                                 </label>
 
+                                <button class="finder__btn finder__btn_t_icon">
+                                    <i class="finder__btn-icon"></i>
+                                    Ближайший храм
+                                </button>
                             </p>
 
+                            <p class="finder__row finder__row_t_small">
+                                <label class="finder__label finder__label_t_right">Тип<br/> постройки</label>
+
+                                <select class="finder__select" id="finder-type">
+                                    <option value="1">Часовня</option>
+                                    <option value="2">Храм</option>
+                                    <option value="3">Ротонда</option>
+                                    <option value="4">Церковь</option>
+                                    <option value="5">Собор</option>
+                                    <option value="6">Приход</option>
+                                </select>
+                            </p>
+
+                            <p class="finder__row finder__row_t_small">
+                                <label class="finder__label finder__label_t_right finder__label_t_str">Не далее</label>
+
+                                <select class="finder__select" id="finder-distance">
+                                    <option value="1">1 км</option>
+                                    <option value="2">2 км</option>
+                                    <option value="3">3 км</option>
+                                    <option value="4">4 км</option>
+                                    <option value="5">5 км</option>
+                                    <option value="6">6 км</option>
+                                </select>
+                            </p>
 
                         </form>
                     </div>
-
                 </section>
 
 			</main><!-- .content -->
@@ -195,7 +238,6 @@
 
         <section class="middle__all-width-content">
 
-
             <h2 class="middle__header jcarousel__header">Отзывы о работе сайта</h2>
 
             <div class="jcarousel__wrapper">
@@ -217,9 +259,7 @@
                             <p class="jcarousel__text">«Текст отзыва»</p>
                             <p class="jcarousel__author">Председатель<br/>Приходского совета собора</p>
                         </li>
-
                     </ul>
-
                 </div>
                 <!-- Prev/next controls -->
                 <a href="#" class="jcarousel__control jcarousel__control_t_prev jcarousel-control-prev inactive" data-jcarouselcontrol="true"></a>
@@ -236,7 +276,6 @@
                     <a class="helper__item" href="#">Чем я могу помочь сайту?</a>
                 </div>
             </div>
-
 
         </section>
 

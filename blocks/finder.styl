@@ -15,36 +15,108 @@
     &_t_left
       text-align left
 
+    &_t_right
+      text-align right
+      font-size 16px
+      line-height 18px
+      padding-right 16px
+
+    &_t_str
+      padding-top 10px
+
   &__row
     margin-bottom 33px
+
+    &_t_last
+      margin-bottom 46px
+
+    &_t_small
+      margin-bottom 25px
 
   &__input,
   &__input>input
     font 20px Georgia, serif
     color wet-bitumen
-    width 307px
+    width 100%
     height 46px
-    border none
     box-shadow none
-    padding 0
+    padding 0 40px 0 15px
     vertical-align top
     color wet-bitumen
+    border 1px solid base-font-color
+    border-radius 0
+    background bg-inp
 
     &:focus
       box-shadow none
-
+      border-color base-font-color
 
   &__input-wrapper
     position: relative;
-    border 1px solid base-font-color
     width 360px
     height 48px
-    padding 0 15px
-    border-radius 0
+    padding 0
+    margin-right 23px
+
     display inline-block
     vertical-align top
 
     img
-      padding-top 12px
+      width 22px
+      height 22px
+      display block
+      position absolute
+      top 13px
+      right 15px
+      opacity .5
 
+      &:hover
+        opacity 1
 
+  &__icon
+    width 22px
+    height 22px
+    background url("images/site-icons.png") no-repeat -26px -105px
+    display block
+    position absolute
+    top 13px
+    right 15px
+    opacity .5
+
+    &:hover
+      background-position -26px -105px
+      opacity 1
+
+    &.active
+      background-position -26px -105px
+
+  &__btn
+    color #ffffff
+    width 220px
+    background old-brick
+    font 20px/44px Georgia, serif
+    border none
+    vertical-align top
+    position: relative;
+
+    &:hover
+      background young-brick
+
+    &_t_icon
+      background base-font-color
+      padding-left 30px
+
+      &:hover
+        background storm
+
+  &__btn-icon
+    width 19px
+    height 25px
+    background url("images/site-icons.png") no-repeat 0 -182px
+    display block
+    position: absolute;
+    left 12px
+    top 9px
+
+  &__select
+    width 360px

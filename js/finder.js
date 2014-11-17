@@ -44,20 +44,17 @@
             var input = this.input,
                 wasOpen = false;
 
-            $( "<img>" )
+            $( "<span>" )
                 .attr( "tabIndex", -1 )
                 .attr( "alt", "Показать все" )
-                .attr( "src", "images/finder-icon-calendar.png" )
+                .attr( "class", "finder__icon" )
                 .tooltip()
                 .appendTo( this.wrapper )
-                .removeClass( "ui-corner-all" )
-                .addClass(  )
                 .mousedown(function() {
                     wasOpen = input.autocomplete( "widget" ).is( ":visible" );
                 })
                 .click(function() {
                     input.focus();
-
                     // Close if already visible
                     if ( wasOpen ) {
                         return;
@@ -108,8 +105,8 @@
             // Remove invalid value
             this.input
                 .val( "" )
-                .attr( "title", value + " didn't match any item" )
-                .tooltip( "open" );
+//                .attr( "title", value + " didn't match any item" )
+//                .tooltip( "open" );
             this.element.val( "" );
             this._delay(function() {
                 this.input.tooltip( "close" ).attr( "title", "" );
@@ -126,7 +123,7 @@
 
 $(function() {
     $( "#sel-city" ).combobox({
-        select: function(event, ui) {
+        open: function(event, ui) {
             alert("!")
         }
     });
@@ -137,15 +134,23 @@ $(function() {
         showOn: "button",
         buttonImage: "images/finder-icon-calendar.png",
         buttonImageOnly: true,
-        buttonText: "Выберите дату",
-        onSelect: function(dateText, inst) {
-            var buttonImage = $("selector").datepicker( "option", "buttonImage" );
-            $( "#finder-datepicker" ).datepicker( "option", "buttonImage", 'images/finder-icon-calendar-selected.png' );
-        }
+        buttonText: "Выберите дату"
+//        onSelect: function(dateText, inst) {
+//            var buttonImage = $("selector").datepicker( "option", "buttonImage" );
+//            $( "#finder-datepicker" ).datepicker( "option", "buttonImage", 'images/finder-icon-calendar-selected.png' );
+//        }
 
     });
 
 
+});
+
+$(function() {
+	$( "#finder-type" ).selectmenu();
+});
+
+$(function() {
+	$( "#finder-distance" ).selectmenu();
 });
 
 

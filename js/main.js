@@ -41,36 +41,25 @@ $(function() {
 
 	createUser = $( "#create-user-form" ).dialog({
 		autoOpen: false,
-		height: 300,
-		width: 350,
+		height: 250,
+		width: 400,
 		modal: true,
-		buttons: {
-			Cancel: function() {
-				dialog.dialog( "close" );
-			}
-		},
 		close: function() {
-//					$("#registration").reset();
-//					allFields.removeClass( "ui-state-error" );
+					$("#registration").reset();
+					allFields.removeClass( "ui-state-error" );
 		}
 	});
 
 	loginUser = $( "#login-user-form" ).dialog({
 		autoOpen: false,
-		height: 300,
+		height: 250,
 		width: 350,
 		modal: true,
-		buttons: {
-			Cancel: function() {
-				dialog.dialog( "close" );
-			}
-		},
 		close: function() {
-//					$("#registration").reset();
-//					allFields.removeClass( "ui-state-error" );
+					$("#registration").reset();
+					allFields.removeClass( "ui-state-error" );
 		}
 	});
-
 
 
 	$( "#createUser" ).button().on( "click", function() {
