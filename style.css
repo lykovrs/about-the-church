@@ -137,7 +137,6 @@ audio:not([controls]),
 }
 a {
   color: #c06458;
-  text-decoration: none;
   line-height: inherit;
   font-weight: inherit;
 }
@@ -478,6 +477,24 @@ textarea[readonly] {
   border-color: #ddd;
   cursor: not-allowed;
 }
+.button {
+  color: #fff;
+  background: #c06458;
+  font: 18px/35px Georgia, serif;
+  padding: 0 20px;
+  border: none;
+  vertical-align: top;
+  position: relative;
+}
+.button:hover {
+  background: #ea6554;
+}
+.button_t_storm {
+  background: #6a7783;
+}
+.button_t_storm:hover {
+  background: #487fae;
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -698,8 +715,8 @@ body {
 .jcarousel {
   position: relative;
   overflow: hidden;
-  margin-bottom: 22px;
 }
+.jcarousel relative,
 .jcarousel_t_card {
   margin: 0 60px;
   font-size: 14px;
@@ -710,7 +727,6 @@ body {
   background: #eee;
 }
 .jcarousel__header {
-  margin-top: 25px;
   background: #eee;
 }
 .jcarousel>ul {
@@ -831,12 +847,16 @@ body {
   background-position: -19px -30px;
 }
 .inner {
-  padding: 0 40px 0 32px;
+  padding: 22px 40px 25px 32px;
 }
 .finder {
   border: 2px solid #c06458;
+  padding: 30px 32px 0 38px;
+  height: 355px;
+}
+.finder_t_main {
   background: url("images/finder.jpg") no-repeat 0 -34px;
-  padding: 152px 32px 0 38px;
+  padding-top: 152px;
   height: 475px;
 }
 .finder__label {
@@ -1027,6 +1047,68 @@ body {
 .ui-menu .ui-state-focus {
   background: #e1e2e3;
   color: #487fae;
+}
+.cards {
+  padding: 5px 40px 5px 32px;
+}
+.cards__item {
+  position: relative;
+  padding: 18px 22px 75px 243px;
+  background: #eee;
+  min-height: 323px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.cards__img {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  width: 203px;
+  height: 278px;
+}
+.cards__header {
+  padding-bottom: 20px;
+}
+.cards__header:after {
+  display: inline-block;
+  content: "";
+  height: 24px;
+  background: url("images/site-icons.png") no-repeat;
+  vertical-align: text-bottom;
+  margin-left: 10px;
+}
+.cards__header_t_small:after {
+  width: 18px;
+  background-position: -8px -263px;
+}
+.cards__header_t_normal:after {
+  width: 26px;
+  background-position: 0 -238px;
+}
+.cards__header_t_big:after {
+  width: 34px;
+  background-position: 0 -213px;
+}
+.cards__c-item {
+  margin-bottom: 6px;
+  color: #353535;
+}
+.cards__c-name {
+  width: 141px;
+  display: inline-block;
+  color: #6a7783;
+}
+.cards__text {
+  margin-top: 12px;
+  line-height: 18px;
+}
+.cards__buttons {
+  position: absolute;
+  bottom: 23px;
+}
+.cards__button {
+  width: 269px;
+  margin-right: 17px;
 }
 /* Left Sidebar
 -----------------------------------------------------------------------------*/

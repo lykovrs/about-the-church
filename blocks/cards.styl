@@ -1,0 +1,63 @@
+.cards
+  padding 5px 40px 5px 32px
+
+  &__item
+    position relative
+    padding 18px 22px 75px 243px
+    background bg-block
+    min-height 323px
+    font-size 14px
+    margin-bottom 20px
+
+  &__img
+    absolute top 22px left 22px
+    width 203px
+    height 278px
+
+  &__header
+    padding-bottom 20px
+
+    &:after
+      display inline-block
+      content ""
+      height 24px
+      background url("images/site-icons.png") no-repeat
+      vertical-align text-bottom
+      margin-left 10px
+
+    &_t_small
+      &:after
+        width 18px
+        background-position  -8px -263px
+
+    &_t_normal
+      &:after
+        width 26px
+        background-position  0 -238px
+
+    &_t_big
+      &:after
+        width 34px
+        background-position  0 -213px
+
+  &__c-item
+    margin-bottom 6px
+    color #353535
+
+  &__c-name
+    width 141px
+    display inline-block
+    color base-font-color
+
+  &__text
+    margin-top 12px
+    line-height 18px
+
+  &__buttons
+    position: absolute
+    bottom 23px
+
+  &__button
+    width 269px
+    margin-right 17px
+
