@@ -1,0 +1,28 @@
+.button {
+  color: #fff;
+  width: 220px;
+  background: old-brick;
+  font: 20px/44px Georgia, serif;
+  border: none;
+  vertical-align: top;
+  position: relative;
+}
+.button:hover {
+  background: young-brick;
+}
+.button_t_icon {
+  background: base-font-color;
+  padding-left: 30px;
+}
+.button_t_icon:hover {
+  background: storm;
+}
+.button__btn-icon {
+  width: 19px;
+  height: 25px;
+  background: url("images/site-icons.png") no-repeat 0 -182px;
+  display: block;
+  position: absolute;
+  left: 12px;
+  top: 9px;
+}

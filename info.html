@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700' rel='stylesheet' type='text/css'>
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="bower_components/jquery-ui/themes/base/selectmenu.css" rel="stylesheet">
+	<link href="bower_components/jquery-ui/themes/base/datepicker.css" rel="stylesheet">
+	<link href="bower_components/jquery-ui/themes/base/autocomplete.css" rel="stylesheet">
+	<link href="bower_components/jquery-ui/themes/base/dialog.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="bower_components/jcarousel/dist/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="bower_components/jScrollPane/script/jquery.jscrollpane.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/finder.js"></script>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+	<header class="header">
+		<a class="header__logo" href="/">
+			<img src="images/logo.png" alt="" width="178" height="55"/>
+		</a>
+		<div class="header__text">
+		Истина Христова должна быть распространяема максимально широко, достигая максимального числа людей. Сегодня Интернет предоставляет исключительные возможности в этом отношении, и Церковь не вправе пренебречь ими, ибо, по слову Апостола, «горе мне, если не благовествую.
+			<cite class="header__cite">Патриарх Алексий II</cite>
+		</div>
+
+		<div class="authorization">
+			<span id="loginUser" class="authorization__btn">Вход</span>
+			<i class="authorization__sep">|</i>
+			<span id="createUser" class="authorization__btn authorization__btn_t_reg">Регистрация</span>
+
+			<div class="dialog" id="create-user-form" title="Создать нового пользователя">
+				<p class="validateTips">Форма регистрации нового пользователя.</p>
+
+				<form id="registration">
+					<fieldset>
+                        <p>
+                            <label for="new-name">Имя</label>
+                            <input type="text" name="name" id="new-name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
+
+                        </p>
+                        <p>
+                            <label for="new-email">Email</label>
+                            <input type="text" name="email" id="new-email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
+
+                        </p>
+                        <p>
+                            <label for="new-password">Пароль</label>
+                            <input type="password" name="password" id="new-password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+
+                        </p>
+
+						<!-- Allow form submission with keyboard without duplicating the dialog button -->
+						<input type="submit">
+					</fieldset>
+				</form>
+			</div>
+
+			<div class="dialog" id="login-user-form" title="Авторизация">
+				<p class="validateTips">Введите свой логин и пароль</p>
+
+				<form id="login">
+					<fieldset>
+                        <p>
+                            <label for="name">Имя</label>
+                            <input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
+
+                        </p>
+                        <p>
+                            <label for="password">Пароль</label>
+                            <input type="password" name="password" id="password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+
+                        </p>
+						<!-- Allow form submission with keyboard without duplicating the dialog button -->
+						<input type="submit">
+					</fieldset>
+				</form>
+			</div>
+
+		</div>
+		<nav class="menu-top">
+			<a class="menu-top__item menu-top__item_t_ok" href="#">Одноклассники</a>
+			<a class="menu-top__item menu-top__item_t_fb" href="#">Facebook</a>
+			<a class="menu-top__item menu-top__item_t_vk" href="#">Вконтакте</a>
+			<a class="menu-top__item  menu-top__item_t_map" href="#">Карта сайта</a>
+		</nav>
+
+	</header><!-- .header-->
+
+	<div class="middle">
+
+		<div class="container">
+			<main class="content">
+
+                <section class="inner">
+
+                    <div class="info-pic">
+                        <img class="info-pic__img" src="images/church-info.jpg" alt=""/>
+                    </div>
+
+                    <h1>Собор Рождества Пресвятой Богородицы</h1>
+
+                    <div class="informer">
+                        <p class="informer__item">
+                            <span class="informer__name">
+                                Тип постройки</span>Пятикупольный каменный храм
+                        </p>
+                        <p class="informer__item">
+                            <span class="informer__name">
+                                Дата постройки</span>1854—1860 годы
+                        </p>
+                        <p class="informer__item">
+                            <span class="informer__name">Архитектор</span>
+                            К.А. Тон
+                        </p>
+                        <p class="informer__item">
+                            <span class="informer__name">
+                                Современная принадлежность</span>Ростовская и Новочеркасская епархия
+                        </p>
+                        <p class="informer__item">
+                            <span class="informer__name">Адрес</span>
+                            г. Ростов-на-Дону, ул. Станиславского, 58
+                        </p>
+                        <p class="informer__item">
+                            <span class="informer__name">Мощи святых</span>
+                            <a href="#">Пророк Даниил</a>,
+                            <a href="#">Праведная Анна</a>
+                        </p>
+                        <p class="informer__item">
+                            <span class="informer__name">Храмы рядом</span>
+                            <a href="#">Храм Серафима Саровского</a>,
+                            <a href="#">Храм Георгия Победоносца</a>
+                        </p>
+
+                    </div>
+
+                    <section class=" scroll-pane__wrapper">
+                       <div class="scroll-pane">
+                           <h2>Описание</h2>
+                           <p>Собор был построен в период с 1854 по 1860 года по типовому проекту архитектора К. А. Тона и внешне схож с другими храмами, построенным по его проектам: храмом Христа Спасителя в Москве и несохранившимися до нашиtх дней Введенским храмом Семеновского полка в Санкт-Петербурге и Святодуховским кафедральным собором в Петрозаводске. Непосредственную «посадку» на местности выполнил архитектор А. С. Кутепов.</p>
+                           <p>Главным попечителем строительства являлся церковный староста Константин Михайлов-Нефедов. На средства потомственного почётного гражданина Ростова И. С. Панченко были расписаны стены собора, приобретены иконы, изготовлена дорогая церковная ограда и установлены ценные кресты на купола.</p>
+                           <p>В 1887 году построена четырёхъярусная колокольня.</p>
+                           <p>В 1937 году собор был закрыт, и на его территории разместился зоопарк, а впоследствии складские помещения. В 40-е годы XX века были разрушены верхние ярусы колокольни.</p>
+                           <p>Собор был построен в период с 1854 по 1860 года по типовому проекту архитектора К. А. Тона и внешне схож с другими храмами, построенным по его проектам: храмом Христа Спасителя в Москве и несохранившимися до нашиtх дней Введенским храмом Семеновского полка в Санкт-Петербурге и Святодуховским кафедральным собором в Петрозаводске. Непосредственную «посадку» на местности выполнил архитектор А. С. Кутепов.</p>
+                           <p>Главным попечителем строительства являлся церковный староста Константин Михайлов-Нефедов. На средства потомственного почётного гражданина Ростова И. С. Панченко были расписаны стены собора, приобретены иконы, изготовлена дорогая церковная ограда и установлены ценные кресты на купола.</p>
+                           <p>В 1887 году построена четырёхъярусная колокольня.</p>
+                           <p>В 1937 году собор был закрыт, и на его территории разместился зоопарк, а впоследствии складские помещения. В 40-е годы XX века были разрушены верхние ярусы колокольни.</p>
+                       </div>
+                    </section>
+
+                    <section class="tiler">
+                        <h2 class="tiler__header">Текущие работы в храме</h2>
+                        <article class="tiler__body">
+                            <div class="tiler__row">
+                                <div class="tiler__cell tiler__cell_t_normal">
+                                    Деньги на храмовую плиту
+                                </div>
+                            </div>
+                            <div class="tiler__row">
+                                <div class="tiler__cell tiler__cell_t_normal">
+                                    Провести ремонт кровли храма, иконной лавки
+                                </div>
+                            </div>
+                        </article>
+
+                        <h2 class="tiler__header">Нужды храма</h2>
+
+                        <article class="tiler__body">
+                            <div class="tiler__row">
+                                <div class="tiler__cell tiler__cell_t_normal">
+                                    Деньги на храмовую плиту
+                                </div>
+                                <div class="tiler__cell tiler__cell_t_normal">
+                                    Покрасить кровлю
+                                </div>
+                            </div>
+                            <div class="tiler__row">
+                                <div class="tiler__cell tiler__cell_t_normal">
+                                    Провести ремонт кровли храма, иконной лавки
+                                </div>
+                                <div class="tiler__cell tiler__cell_t_normal">
+                                    Оборудовать подвальное помещение для работы
+                                </div>
+                            </div>
+                        </article>
+
+                        <h2 class="tiler__header">Требы</h2>
+
+                        <article class="tiler__body">
+                            <div class="tiler__row">
+                                <div class="tiler__cell tiler__cell_t_small">
+                                    Крещение
+                                </div>
+                                <div class="tiler__cell tiler__cell_t_small">
+                                    Отпевание
+                                </div>
+                                <div class="tiler__cell tiler__cell_t_small">
+                                    Поминание на полгода
+                                </div>
+                            </div>
+                            <div class="tiler__row">
+                                <div class="tiler__cell tiler__cell_t_small">
+                                    Венчание
+                                </div>
+                                <div class="tiler__cell tiler__cell_t_small">
+                                    Соркоуст
+                                </div>
+                                <div class="tiler__cell tiler__cell_t_small">
+                                    Поминание на год
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                </section>
+
+			</main><!-- .content -->
+		</div><!-- .container-->
+
+		<aside class="left-sidebar">
+            <menu class="m-menu">
+                <li class="m-menu__item"><a class="m-menu__lnk" href="#">Главная</a></li>
+                <li class="m-menu__item"><a class="m-menu__lnk m-menu__lnk_t_active" href="#">Храмы</a></li>
+                <li class="m-menu__item"><a class="m-menu__lnk" href="#">О сервисе</a></li>
+                <li class="m-menu__item"><a class="m-menu__lnk" href="#">Контакты</a></li>
+            </menu>
+
+            <div id="datepicker" class="m-datepicker"></div>
+
+            <div class="news">
+                <article class="news__item">
+                    <p class="news__date">19.09.2014</p>
+                    <a class="news__header" href="#">Святейший Патриарх Кирилл выступил на встрече с участниками VI фестиваля «Вера и слово»</a>
+                </article>
+                <article class="news__item">
+                    <p class="news__date">19.09.2014</p>
+                    <a class="news__header" href="#">В Нижегородской области открыли мемориальную доску блаженной Пелагие Дивеевской</a>
+                </article>
+            </div>
+
+            <div class="comment">
+                <h3>Отзывы настоятеля</h3>
+                <p>"Текст отзыва"</p>
+                <div class="comment__author">
+                    Председатель<br/>Приходского совета собора
+                </div>
+
+            </div>
+		</aside><!-- .left-sidebar -->
+
+	</div><!-- .middle-->
+
+</div><!-- .wrapper -->
+
+<footer class="footer">
+    119334, Москва, Андреевская набережная, 222<br/>
+    Телефон: (495) 123-45-67 (доб. 130)
+	<div class="footer__copyright">Дизайн сайта <a class="footer__lnk" href="#">kvazard</a></div>
+</footer><!-- .footer -->
+
+</body>
+</html>

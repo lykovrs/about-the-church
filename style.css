@@ -177,6 +177,7 @@ h1 small {
   font-size: 18px;
 }
 h2 {
+  margin-bottom: 10px;
   font-size: 24px;
   line-height: 40px;
 }
@@ -1110,6 +1111,195 @@ body {
   width: 269px;
   margin-right: 17px;
 }
+.info-pic {
+  padding: 18px 0;
+}
+.informer {
+  font-size: 14px;
+  margin-bottom: 65px;
+}
+.informer__item {
+  color: #353533;
+  margin-bottom: 6px;
+}
+.informer__name {
+  min-width: 215px;
+  color: #6a7783;
+  display: inline-block;
+}
+.scroll-pane {
+  width: 100%;
+  height: 400px;
+  overflow: auto;
+  color: #404040;
+}
+.scroll-pane__wrapper {
+  background: #eee;
+  padding: 0 0 0 20px;
+  margin-bottom: 40px;
+}
+.scroll-pane .jspContainer {
+  overflow: hidden;
+  position: relative;
+}
+.scroll-pane .jspPane {
+  position: absolute;
+/*padding 25px*/
+}
+.scroll-pane .jspVerticalBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  background: #f00;
+}
+.scroll-pane .jspVerticalBar .jspArrow {
+  height: 40px;
+}
+.scroll-pane .jspVerticalBar .jspArrow:focus {
+  outline: none;
+}
+.scroll-pane .jspHorizontalBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #f00;
+}
+.scroll-pane .jspHorizontalBar .jspCap {
+  float: left;
+}
+.scroll-pane .jspHorizontalBar .jspArrow {
+  width: 40px;
+  float: left;
+  height: 100%;
+}
+.scroll-pane .jspCap {
+  display: none;
+}
+.scroll-pane .jspTrack {
+  background: #eee;
+  position: relative;
+}
+.scroll-pane .jspDrag {
+  background: #bbd;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none;
+}
+.scroll-pane .jspHorizontalBar .jspTrack,
+.scroll-pane .jspHorizontalBar .jspDrag {
+  float: left;
+  height: 100%;
+}
+.scroll-pane .jspArrow {
+  background: #fff;
+  position: relative;
+  text-indent: -20000px;
+  display: block;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+.scroll-pane .jspArrow:hover {
+  background: #6a7783;
+}
+.scroll-pane .jspArrow:before {
+  display: block;
+  content: "";
+  width: 17px;
+  height: 11px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -5px 0 0 -9px;
+  background: url("images/site-icons.png") no-repeat;
+}
+.scroll-pane .jspArrow.jspArrowUp:before {
+  background-position: -16px -65px;
+}
+.scroll-pane .jspArrow.jspArrowUp:hover:before {
+  background-position: 0 -65px;
+}
+.scroll-pane .jspArrow.jspArrowDown:before {
+  background-position: -16px -84px;
+}
+.scroll-pane .jspArrow.jspArrowDown:hover:before {
+  background-position: 0 -84px;
+}
+.scroll-pane .jspArrow.jspDisabled {
+  cursor: default;
+}
+.scroll-pane .jspArrow.jspDisabled:hover {
+  background: #fff;
+}
+.scroll-pane .jspArrow.jspDisabled.jspArrowUp:before {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  background-position: -16px -65px;
+}
+.scroll-pane .jspArrow.jspDisabled.jspArrowDown:before {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  background-position: -16px -84px;
+}
+.jspCorner {
+  background: #eeeef4;
+  float: left;
+  height: 100%;
+}
+* html .jspCorner {
+  margin: 0 -3px 0 0;
+}
+.horizontal-only {
+  height: auto;
+  max-height: 400px;
+}
+.tiler__header {
+  margin-bottom: 18px;
+}
+.tiler__body {
+  margin-bottom: 30px;
+}
+.tiler__row {
+  margin-bottom: 10px;
+  zoom: 1;
+}
+.tiler__row:before,
+.tiler__row:after {
+  content: "";
+  display: table;
+}
+.tiler__row:after {
+  clear: both;
+}
+.tiler__cell {
+  background: #eee;
+  line-height: 40px;
+  padding: 0 15px;
+  float: left;
+  width: 100%;
+}
+.tiler__cell_t_normal {
+  width: 49%;
+  margin-left: 2%;
+}
+.tiler__cell_t_normal:first-child {
+  margin-left: 0;
+}
+.tiler__cell_t_small {
+  width: 32%;
+  margin-left: 2%;
+}
+.tiler__cell_t_small:first-child {
+  margin-left: 0;
+}
 /* Left Sidebar
 -----------------------------------------------------------------------------*/
 .left-sidebar {
@@ -1209,6 +1399,14 @@ body {
   color: #6a7783;
   text-decoration: underline;
   font-size: 15px;
+}
+.comment {
+  padding: 37px 60px 0 25px;
+  font-size: 14px;
+}
+.comment__author {
+  text-align: right;
+  color: #c06458;
 }
 /* Footer
 -----------------------------------------------------------------------------*/

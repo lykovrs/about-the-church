@@ -1,0 +1,6 @@
+.comment {
+  padding: 10px;
+}
+.comment__author {
+  text-align: right;
+}

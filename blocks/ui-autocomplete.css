@@ -1,0 +1,18 @@
+.ui-autocomplete {
+  margin: 0 -1px;
+  border-right: 1px solid base-font-color;
+  border-bottom: 1px solid base-font-color;
+  border-left: 1px solid base-font-color;
+  background: #fff;
+  list-style: none;
+}
+.ui-autocomplete .ui-menu-item {
+  padding: 0 15px;
+  color: wet-bitumen;
+  font-size: 20px;
+  line-height: 48px;
+}
+.ui-autocomplete .ui-state-focus {
+  background: bg-inp;
+  color: storm;
+}

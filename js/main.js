@@ -133,6 +133,9 @@ $(function() {
 				target: '+=1'
 			});
 
+
+    $('.scroll-pane').jScrollPane({showArrows: true});
+
 });
 
 
