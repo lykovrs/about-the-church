@@ -23,7 +23,8 @@ body
 .wrapper
   margin 0 auto
   min-height 100%
-  width 1220px
+  max-width 1220px
+  min-width 960px
   height auto !important
   height 100%
   background-color #fff
@@ -49,6 +50,7 @@ body
   &__header
     font-size 28px
     padding 24px 44px 0
+    margin-bottom 0
 
   &__content
     padding 0 44px
@@ -60,6 +62,10 @@ body
 
 .content
   padding 0 0 0 325px
+
+@media screen and (max-width: 1220px)
+  .content
+    padding 0 0 0 275px
 
 @import 'blocks/main-hint'
 @import 'blocks/jcarousel'
@@ -83,6 +89,9 @@ body
   margin-left -100%
   width 325px
 
+@media screen and (max-width: 1220px)
+  .left-sidebar
+    width 275px
 
 @import 'blocks/m-menu'
 @import 'blocks/m-datepicker'

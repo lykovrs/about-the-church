@@ -5,7 +5,7 @@
 
 
   &_t_main
-    background url("images/finder.jpg") no-repeat 0 -34px
+    background url("images/finder.jpg") repeat-x 0 -34px
     padding-top 152px
     height 475px
 
@@ -126,3 +126,29 @@
 
   &__select
     width 360px
+
+@media screen and (max-width: 1220px)
+  .finder
+    padding 30px 16px 0 19px
+
+    &_t_main
+      padding-top 152px
+
+    &__input-wrapper
+      width 300px
+
+@media screen and (max-width: 1140px)
+  .finder
+    &__input-wrapper
+      width 290px
+
+
+@media screen and (max-width: 1080px)
+  .finder
+    &__input-wrapper
+      width 240px
+
+@media screen and (max-width: 1000px)
+  .finder
+    &__input-wrapper
+      width 220px
