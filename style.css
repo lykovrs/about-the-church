@@ -1300,6 +1300,76 @@ body {
 .tiler__cell_t_small:first-child {
   margin-left: 0;
 }
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px auto;
+}
+.pagination > li {
+  display: inline;
+}
+.pagination__wrapper {
+  text-align: center;
+}
+.pagination>li>a {
+  position: relative;
+  float: left;
+  line-height: 40px;
+  min-width: 40px;
+  color: #6a7783;
+  text-decoration: none;
+  background-color: #eee;
+  margin: 0 5px;
+  position: relative;
+}
+.pagination>li>a:hover,
+.pagination>li>a:focus {
+  color: #fff;
+  background-color: #6a7783;
+  border-color: #ddd;
+}
+.pagination>.active>a,
+.pagination>.active>a:hover,
+.pagination>.active>a:focus {
+  z-index: 2;
+  color: #fff;
+  cursor: default;
+  background-color: #6a7783;
+}
+.pagination>li:first-child a:before,
+.pagination>li:last-child a:before {
+  display: block;
+  margin: 10px auto;
+  width: 11px;
+  height: 17px;
+  background: url("images/site-icons.png") no-repeat;
+  content: "";
+}
+.pagination>li:first-child a:before {
+  background-position: -1px -30px;
+}
+.pagination>li:last-child a:before {
+  background-position: -19px -30px;
+}
+.pagination>.disabled>a,
+.pagination>.disabled>a:hover,
+.pagination>.disabled>a:focus {
+  color: #777;
+  cursor: default;
+  border-color: #ddd;
+}
+.pagination>.disabled>a:before,
+.pagination>.disabled>a:hover:before,
+.pagination>.disabled>a:focus:before {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+.pagination>.disabled>a:hover,
+.pagination>.disabled>a:hover:hover,
+.pagination>.disabled>a:focus:hover {
+  background: #eee;
+}
 /* Left Sidebar
 -----------------------------------------------------------------------------*/
 .left-sidebar {
