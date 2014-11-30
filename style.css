@@ -771,8 +771,15 @@ body {
   width: 155px;
   height: 200px;
 }
+.jcarousel__item-helper-wrapper {
+  position: absolute;
+  bottom: 29px;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
 .jcarousel__item-helper {
-  display: block;
+  display: inline-block;
   padding: 0 30px;
   width: 250px;
   height: 50px;
@@ -783,10 +790,7 @@ body {
   text-decoration: none;
   font-size: 20px;
   line-height: 43px;
-  position: absolute;
-  bottom: 29px;
-  left: 50%;
-  margin-left: -125px;
+  margin: 0 8px;
 }
 .jcarousel__item-helper:hover {
   background: rgba(234,101,84,0.8);
