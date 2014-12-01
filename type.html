@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700' rel='stylesheet' type='text/css'>
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="bower_components/jquery-ui/themes/base/selectmenu.css" rel="stylesheet">
+	<link href="bower_components/jquery-ui/themes/base/datepicker.css" rel="stylesheet">
+	<link href="bower_components/jquery-ui/themes/base/autocomplete.css" rel="stylesheet">
+	<link href="bower_components/jquery-ui/themes/base/dialog.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="bower_components/jcarousel/dist/jquery.jcarousel.min.js"></script>
+	<script src="js/main.js"></script>
+    <script type="text/javascript" src="bower_components/jScrollPane/script/jquery.jscrollpane.min.js"></script>
+	<script src="js/finder.js"></script>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <header class="header">
+        <a class="header__logo" href="/">
+            <img src="images/logo.png" alt=""/>
+        </a>
+        <div class="header__text">
+            Истина Христова должна быть распространяема максимально широко, достигая максимального числа людей. Сегодня Интернет предоставляет исключительные возможности в этом отношении, и Церковь не вправе пренебречь ими, ибо, по слову Апостола, «горе мне, если не благовествую.
+            <cite class="header__cite">Патриарх Алексий II</cite>
+        </div>
+
+        <div class="authorization">
+            <span id="loginUser" class="authorization__btn">Вход</span>
+            <i class="authorization__sep">|</i>
+            <span id="createUser" class="authorization__btn authorization__btn_t_reg">Регистрация</span>
+
+            <div class="dialog" id="create-user-form" title="Создать нового пользователя">
+                <p class="validateTips">Форма регистрации нового пользователя.</p>
+
+                <form id="registration">
+                    <fieldset>
+                        <p>
+                            <label for="new-name">Имя</label>
+                            <input type="text" name="name" id="new-name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
+
+                        </p>
+                        <p>
+                            <label for="new-email">Email</label>
+                            <input type="text" name="email" id="new-email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
+
+                        </p>
+                        <p>
+                            <label for="new-password">Пароль</label>
+                            <input type="password" name="password" id="new-password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+
+                        </p>
+
+                        <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                        <input type="submit">
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="dialog" id="login-user-form" title="Авторизация">
+                <p class="validateTips">Введите свой логин и пароль</p>
+
+                <form id="login">
+                    <fieldset>
+                        <p>
+                            <label for="name">Имя</label>
+                            <input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
+
+                        </p>
+                        <p>
+                            <label for="password">Пароль</label>
+                            <input type="password" name="password" id="password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+
+                        </p>
+                        <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                        <input type="submit">
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+        <nav class="menu-top">
+            <a class="menu-top__item menu-top__item_t_ok" href="#">Одноклассники</a>
+            <a class="menu-top__item menu-top__item_t_fb" href="#">Facebook</a>
+            <a class="menu-top__item menu-top__item_t_vk" href="#">Вконтакте</a>
+            <a class="menu-top__item  menu-top__item_t_map" href="#">Карта сайта</a>
+        </nav>
+
+    </header><!-- .header-->
+
+	<div class="middle">
+
+		<div class="container">
+			<main class="content">
+
+                <section class="inner">
+                    <h1>Lorem ipsum dolor sit amet consectetuer adipiscing
+                        elit</h1>
+
+
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit. Aenean commodo ligula eget dolor. Aenean massa
+                        <strong>strong</strong>. Cum sociis natoque penatibus
+                        et magnis dis parturient montes, nascetur ridiculus
+                        mus. Donec quam felis, ultricies nec, pellentesque
+                        eu, pretium quis, sem. Nulla consequat massa quis
+                        enim. Donec pede justo, fringilla vel, aliquet nec,
+                        vulputate eget, arcu. In enim justo, rhoncus ut,
+                        imperdiet a, venenatis vitae, justo. Nullam dictum
+                        felis eu pede <a class="external ext" href="#">link</a>
+                        mollis pretium. Integer tincidunt. Cras dapibus.
+                        Vivamus elementum semper nisi. Aenean vulputate
+                        eleifend tellus. Aenean leo ligula, porttitor eu,
+                        consequat vitae, eleifend ac, enim. Aliquam lorem ante,
+                        dapibus in, viverra quis, feugiat a, tellus. Phasellus
+                        viverra nulla ut metus varius laoreet. Quisque rutrum.
+                        Aenean imperdiet. Etiam ultricies nisi vel augue.
+                        Curabitur ullamcorper ultricies nisi.</p>
+
+
+                    <h1>Lorem ipsum dolor sit amet consectetuer adipiscing
+                        elit</h1>
+
+
+                    <h2>Aenean commodo ligula eget dolor aenean massa</h2>
+
+
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit. Aenean commodo ligula eget dolor. Aenean massa.
+                        Cum sociis natoque penatibus et magnis dis parturient
+                        montes, nascetur ridiculus mus. Donec quam felis,
+                        ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+
+                    <h2>Aenean commodo ligula eget dolor aenean massa</h2>
+
+
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit. Aenean commodo ligula eget dolor. Aenean massa.
+                        Cum sociis natoque penatibus et magnis dis parturient
+                        montes, nascetur ridiculus mus. Donec quam felis,
+                        ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetuer.</li>
+                        <li>Aenean commodo ligula eget dolor.</li>
+                        <li>Aenean massa cum sociis natoque penatibus.</li>
+                    </ul>
+
+
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit. Aenean commodo ligula eget dolor. Aenean massa.
+                        Cum sociis natoque penatibus et magnis dis parturient
+                        montes, nascetur ridiculus mus. Donec quam felis,
+                        ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+
+                    <form action="#" method="post">
+                        <fieldset>
+                            <p><label for="name">Name:</label></p>
+                            <p> <input type="text" id="name" placeholder="Enter your
+full name" /></p>
+                            <p><label for="email">Email:</label></p>
+                            <p> <input type="email" id="email" placeholder="Enter
+your email address" /></p>
+                            <p><label for="message">Message:</label></p>
+                            <p> <textarea id="message" placeholder="What's on your
+mind?"></textarea></p>
+                            <input type="submit" value="Send message" />
+
+                        </fieldset>
+                    </form>
+
+
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit. Aenean commodo ligula eget dolor. Aenean massa.
+                        Cum sociis natoque penatibus et magnis dis parturient
+                        montes, nascetur ridiculus mus. Donec quam felis,
+                        ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+
+                    <table class="data">
+                        <tr>
+                            <th>Entry Header 1</th>
+                            <th>Entry Header 2</th>
+                            <th>Entry Header 3</th>
+                            <th>Entry Header 4</th>
+                        </tr>
+                        <tr>
+                            <td>Entry First Line 1</td>
+                            <td>Entry First Line 2</td>
+                            <td>Entry First Line 3</td>
+                            <td>Entry First Line 4</td>
+                        </tr>
+                        <tr>
+                            <td>Entry Line 1</td>
+                            <td>Entry Line 2</td>
+                            <td>Entry Line 3</td>
+                            <td>Entry Line 4</td>
+                        </tr>
+                        <tr>
+                            <td>Entry Last Line 1</td>
+                            <td>Entry Last Line 2</td>
+                            <td>Entry Last Line 3</td>
+                            <td>Entry Last Line 4</td>
+                        </tr>
+                    </table>
+
+
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit. Aenean commodo ligula eget dolor. Aenean massa.
+                        Cum sociis natoque penatibus et magnis dis parturient
+                        montes, nascetur ridiculus mus. Donec quam felis,
+                        ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+
+
+                </section>
+
+            </main><!-- .content -->
+		</div><!-- .container-->
+
+		<aside class="left-sidebar">
+            <menu class="m-menu">
+                <li class="m-menu__item"><a class="m-menu__lnk" href="#">Главная</a></li>
+                <li class="m-menu__item"><a class="m-menu__lnk m-menu__lnk_t_active" href="#">Храмы</a></li>
+                <li class="m-menu__item"><a class="m-menu__lnk" href="#">О сервисе</a></li>
+                <li class="m-menu__item"><a class="m-menu__lnk" href="#">Контакты</a></li>
+            </menu>
+
+            <div id="datepicker" class="m-datepicker"></div>
+
+            <div class="news">
+                <article class="news__item">
+                    <p class="news__date">19.09.2014</p>
+                    <a class="news__header" href="#">Святейший Патриарх Кирилл выступил на встрече с участниками VI фестиваля «Вера и слово»</a>
+                </article>
+                <article class="news__item">
+                    <p class="news__date">19.09.2014</p>
+                    <a class="news__header" href="#">В Нижегородской области открыли мемориальную доску блаженной Пелагие Дивеевской</a>
+                </article>
+            </div>
+		</aside><!-- .left-sidebar -->
+
+	</div><!-- .middle-->
+
+</div><!-- .wrapper -->
+
+<footer class="footer">
+    119334, Москва, Андреевская набережная, 222<br/>
+    Телефон: (495) 123-45-67 (доб. 130)
+	<div class="footer__copyright">Дизайн сайта <a class="footer__lnk" href="#">kvazard</a></div>
+</footer><!-- .footer -->
+
+</body>
+</html>
