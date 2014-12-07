@@ -1029,20 +1029,34 @@ body {
   background: #ea6554;
 }
 .finder__btn_t_icon {
-  background: #6a7783;
   padding-left: 30px;
 }
-.finder__btn_t_icon:hover {
+.finder__btn_t_storm {
+  background-color: #6a7783;
+}
+.finder__btn_t_storm:hover {
   background: #487fae;
 }
+.finder__btn_t_load:hover {
+  background: #c06458;
+}
 .finder__btn-icon {
+  display: block;
+  position: absolute;
+}
+.finder__btn-icon_t_church {
+  left: 12px;
+  top: 9px;
   width: 19px;
   height: 25px;
   background: url("images/site-icons.png") no-repeat 0 -182px;
-  display: block;
-  position: absolute;
-  left: 12px;
-  top: 9px;
+}
+.finder__btn-icon_t_loader {
+  width: 24px;
+  height: 24px;
+  left: 10px;
+  top: 50%;
+  margin-top: -16px;
 }
 .finder__select {
   width: 360px;
