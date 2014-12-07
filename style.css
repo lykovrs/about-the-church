@@ -478,7 +478,8 @@ textarea[readonly] {
   border-color: #ddd;
   cursor: not-allowed;
 }
-.button {
+.button,
+.ui-dialog .ui-button {
   color: #fff;
   background: #c06458;
   font: 18px/35px Georgia, serif;
@@ -487,13 +488,16 @@ textarea[readonly] {
   vertical-align: top;
   position: relative;
 }
-.button:hover {
+.button:hover,
+.ui-dialog .ui-button:hover {
   background: #ea6554;
 }
-.button_t_storm {
+.button_t_storm,
+.ui-dialog .ui-button_t_storm {
   background: #6a7783;
 }
-.button_t_storm:hover {
+.button_t_storm:hover,
+.ui-dialog .ui-button_t_storm:hover {
   background: #487fae;
 }
 * {
@@ -636,6 +640,30 @@ body {
 }
 .ui-dialog {
   background: #fff;
+  border: 1px solid;
+}
+.ui-dialog .ui-button {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+  padding: 0;
+  vertical-align: bottom;
+  position: absolute;
+}
+.ui-dialog .ui-dialog-titlebar-close:before {
+  position: absolute;
+  top: -1px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "X";
+  line-height: normal;
+  font-family: monospace;
+  font-weight: bold;
+}
+.ui-dialog .ui-dialog-titlebar-close .ui-button-text {
+  display: none;
 }
 .ui-helper-clearfix {
   zoom: 1;
@@ -647,6 +675,10 @@ body {
 }
 .ui-helper-clearfix:after {
   clear: both;
+}
+.ui-dialog-title {
+  font-size: 22px;
+  color: #404040;
 }
 /* Middle
 -----------------------------------------------------------------------------*/

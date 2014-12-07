@@ -1,5 +1,35 @@
 .ui-dialog
   background #fff
+  border 1px solid
+
+  .ui-button
+    @extend .button
+    border-radius 3px
+
+  .ui-dialog-titlebar-close
+    padding 0
+    vertical-align bottom
+    position absolute
+
+    &:before
+      position absolute
+      top -1px
+      bottom 0
+      left 0
+      right 0
+      content "X"
+      line-height normal
+      font-family monospace
+      font-weight bold
+
+    .ui-button-text
+      display none
 
 .ui-helper-clearfix
   clearfix()
+
+.ui-dialog-title
+  font-size 22px
+  color #404040
+
+

@@ -41,9 +41,13 @@ $(function() {
 
 	createUser = $( "#create-user-form" ).dialog({
 		autoOpen: false,
-		height: 250,
-		width: 400,
+
 		modal: true,
+        buttons: {
+            Отправить: function() {
+                $( this ).dialog( "close" );
+            }
+        },
 		close: function() {
 					$("#registration").reset();
 					allFields.removeClass( "ui-state-error" );
@@ -52,9 +56,13 @@ $(function() {
 
 	loginUser = $( "#login-user-form" ).dialog({
 		autoOpen: false,
-		height: 250,
-		width: 350,
+
 		modal: true,
+        buttons: {
+            Отправить: function() {
+                $( this ).dialog( "close" );
+            }
+        },
 		close: function() {
 					$("#registration").reset();
 					allFields.removeClass( "ui-state-error" );
