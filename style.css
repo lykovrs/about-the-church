@@ -382,7 +382,7 @@ select,
 .uneditable-input {
   display: inline-block;
   width: 210px;
-  height: 20px;
+  height: 26px;
   padding: 4px;
   font-size: 16px;
   line-height: 20px;
@@ -698,6 +698,7 @@ body {
 }
 .middle__all-width-content {
   zoom: 1;
+  clear: both;
 }
 .middle__all-width-content:before,
 .middle__all-width-content:after {
@@ -1476,6 +1477,7 @@ body {
   float: left;
   margin-left: -100%;
   width: 325px;
+  margin-bottom: 25px;
 }
 @media screen and (max-width: 1220px) {
   .left-sidebar {
