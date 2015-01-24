@@ -1,0 +1,33 @@
+.ui-selectmenu-button {
+  height: 40px;
+  border: 1px solid bg-inp;
+  background: bg-inp;
+  color: wet-bitumen;
+  vertical-align: top;
+}
+.ui-selectmenu-button .ui-icon {
+  top: 23px !important;
+  right: 19px !important;
+  width: 0;
+  height: 0;
+  border-top: 4px solid old-brick;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+.ui-selectmenu-button.ui-state-focus .ui-icon {
+  border-top-color: young-brick;
+}
+.ui-menu {
+  margin: 0;
+}
+.ui-menu .ui-menu-item {
+  padding: 0 16px;
+  background: bg-inp;
+  color: wet-bitumen;
+  font-size: 16px;
+  line-height: 40px;
+}
+.ui-menu .ui-state-focus {
+  background: #e1e2e3;
+  color: storm;
+}

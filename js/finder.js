@@ -127,6 +127,12 @@ $(function() {
             alert("!")
         }
     });
+
+    $( "#sel-city2" ).combobox({
+        open: function(event, ui) {
+            alert("!")
+        }
+    });
 });
 
 $(function() {
@@ -151,6 +157,7 @@ $(function() {
 
 $(function() {
 	$( "#finder-distance" ).selectmenu();
+	$( "#finder-distance2" ).selectmenu();
 });
 
 
