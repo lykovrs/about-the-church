@@ -118,7 +118,10 @@
                                         <option class="Belarus" value="Bobruisk">Бобруйск</option>
                                     </select>
 
-                                <button class="finder__btn">Поиск</button>
+                                <button class="button finder__btn button finder__btn_t_load">
+                                    <i class="finder__btn-icon finder__btn-icon_t_loader">
+                                        <img src="images/loader.gif"></i>
+                                    Поиск</button>
                             </p>
                             <p class="finder__row finder__row_t_last">
                                 <label class="finder__label finder__label_t_left">Дата службы </label>
@@ -136,6 +139,19 @@
                                 <label class="finder__label finder__label_t_right">Тип<br/> постройки</label>
 
                                 <select class="finder__select" id="finder-type">
+                                    <option value="1">Часовня</option>
+                                    <option value="2">Храм</option>
+                                    <option value="3">Ротонда</option>
+                                    <option value="4">Церковь</option>
+                                    <option value="5">Собор</option>
+                                    <option value="6">Приход</option>
+                                </select>
+                            </p>
+
+                            <p class="finder__row finder__row_t_small">
+                                <label class="finder__label finder__label_t_right">Тип<br/> постройки</label>
+
+                                <select class="finder__select" id="finder-type2">
                                     <option value="1">Часовня</option>
                                     <option value="2">Храм</option>
                                     <option value="3">Ротонда</option>

@@ -144,6 +144,10 @@ $(function() {
 
     $('.scroll-pane').jScrollPane({showArrows: true});
 
+
+    $(".finder__btn_t_load").on("click", function(){
+        $(this).find(".finder__btn-icon_t_loader").show();
+    });
 });
 
 

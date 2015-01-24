@@ -153,6 +153,7 @@ $(function() {
 
 $(function() {
 	$( "#finder-type" ).selectmenu();
+	$( "#finder-type2" ).selectmenu();
 });
 
 $(function() {

@@ -1136,6 +1136,7 @@ body {
   left: 10px;
   top: 50%;
   margin-top: -16px;
+  display: none;
 }
 .finder__select {
   width: 360px;
